@@ -1,13 +1,3 @@
-// To parse this JSON data, do
-//
-//     final character = characterFromJson(jsonString);
-
-import 'dart:convert';
-
-Character characterFromJson(String str) => Character.fromJson(json.decode(str));
-
-String characterToJson(Character data) => json.encode(data.toJson());
-
 class Character {
   Character({
     this.id,
@@ -16,6 +6,7 @@ class Character {
     this.species,
     this.type,
     this.gender,
+    this.image,
   });
 
   int? id;
@@ -24,6 +15,7 @@ class Character {
   String? species;
   String? type;
   String? gender;
+  String? image;
 
   factory Character.fromJson(Map<String, dynamic> json) => Character(
         id: json["id"] == null ? null : json["id"],
@@ -32,6 +24,7 @@ class Character {
         species: json["species"] == null ? null : json["species"],
         type: json["type"] == null ? null : json["type"],
         gender: json["gender"] == null ? null : json["gender"],
+        image: json["image"] == null ? null : json["image"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -41,5 +34,6 @@ class Character {
         "species": species == null ? null : species,
         "type": type == null ? null : type,
         "gender": gender == null ? null : gender,
+        "image": image == null ? null : image,
       };
 }

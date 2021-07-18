@@ -9,18 +9,14 @@ class CharacterViewModel extends GetxController {
     getAllCharacter();
   }
   List<Character> characterList = [];
-
   getAllCharacter() async {
     var result = await _apiServices.getCharacterServices();
-    //var imagesresult = await _apiServices.getCharacterImagesServices();
     if (result == false) {
       print("Api Call Hata");
     } else {
       for (var singleList in result) {
         characterList.add(Character.fromJson(singleList));
       }
-
-      print("bitti");
       update();
     }
   }

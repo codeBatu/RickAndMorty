@@ -8,11 +8,12 @@ class CharaterName extends StatelessWidget {
     return GetBuilder<CharacterViewModel>(builder: (builder) {
       //  double wSize = MediaQuery.of(context).size.width;
       return ListView.builder(
-        itemCount: 1,
+        itemCount: builder.characterList.length,
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {},
             child: Card(
+              color: Colors.orange,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               child: Container(

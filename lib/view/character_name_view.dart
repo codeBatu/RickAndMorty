@@ -10,11 +10,9 @@ class CharaterName extends StatelessWidget {
       return ListView.builder(
         itemCount: builder.characterList.length,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            width: wSize,
-            height: 80,
-            child: InkWell(
-              onTap: () {},
+          return InkWell(
+            onTap: () {},
+            child: Card(
               child: ListTile(
                 leading: Image.network("${builder.characterList[index].image}"),
                 title: Row(

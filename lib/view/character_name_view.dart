@@ -11,18 +11,20 @@ class CharaterName extends StatelessWidget {
         itemCount: builder.characterList.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            margin: EdgeInsets.all(10),
             width: wSize,
             height: 80,
-            child: ListTile(
-              leading: Image.network("${builder.characterList[index].image}"),
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(builder.characterList[index].name.toString()),
-                ],
+            child: InkWell(
+              onTap: () {},
+              child: ListTile(
+                leading: Image.network("${builder.characterList[index].image}"),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(builder.characterList[index].name.toString()),
+                  ],
+                ),
+                trailing: Text(builder.characterList[index].status.toString()),
               ),
-              trailing: Text(builder.characterList[index].status.toString()),
             ),
           );
         },
@@ -30,18 +32,3 @@ class CharaterName extends StatelessWidget {
     });
   }
 }
-/*Container(
-              margin: EdgeInsets.all(10),
-              width: wSize,
-              height: 80,
-              color: Colors.green,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    builder.characterList[index].name.toString(),
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ));*/

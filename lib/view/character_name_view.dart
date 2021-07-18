@@ -15,11 +15,18 @@ class CharaterName extends StatelessWidget {
             child: Card(
               color: Colors.orange,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black, width: 2),
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: ListTile(
-                  leading:
-                      Image.network("${builder.characterList[index].image}"),
+                  leading: Image.network(
+                    "${builder.characterList[index].image}",
+                    height: 50,
+                  ),
                   title: Row(
                     children: [
                       Text(builder.characterList[index].name.toString()),

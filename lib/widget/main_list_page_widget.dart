@@ -32,7 +32,7 @@ class ListPage extends StatelessWidget {
                       Text(builder.characterList[index].name.toString()),
                     ],
                   ),
-                  trailing: Icon(Icons.star_outline_sharp),
+                  trailing: Icon(Icons.arrow_right),
                   subtitle: Text(
                     builder.characterList[index].status.toString(),
                   ),

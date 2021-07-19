@@ -37,7 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
     //double wSize = MediaQuery.of(context).size.width;
     // double hSize = MediaQuery.of(context).size.height;
     return Scaffold(
-      //Todo Appbar Yap
       /* appBar: AppBar(
         title: Text(widget.title),
       ),*/

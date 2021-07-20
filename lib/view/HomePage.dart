@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:rickandmorty/view/character_name_view.dart';
-
 import 'package:rickandmorty/widget/home_page_card_widget.dart';
 
 // ignore: must_be_immutable

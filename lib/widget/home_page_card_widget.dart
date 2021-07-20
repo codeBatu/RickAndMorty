@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 Widget rickAndMortyCard(image) {
   return AspectRatio(
-    aspectRatio: 2 / 1.95,
+    aspectRatio: 2.2 / 2,
     child: Container(
-      margin: EdgeInsets.only(right: 15),
+      margin: EdgeInsets.only(left: 35),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
+        borderRadius: BorderRadius.circular(150),
         image: DecorationImage(
           image: NetworkImage(image),
           fit: BoxFit.cover,

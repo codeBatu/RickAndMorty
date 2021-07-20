@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rickandmorty/view/character_name_view.dart';
+import 'package:get/get.dart';
+import 'package:rickandmorty/view/new_list_page.dart';
+
 import 'package:rickandmorty/widget/home_page_card_widget.dart';
 
 // ignore: must_be_immutable
@@ -48,22 +50,19 @@ class _HomePageState extends State<HomePage> {
                       height: 20,
                     ),
                     Text(
-                      "Rick And Morty FaceBook",
+                      "Rick And Morty ",
                       style: TextStyle(fontSize: 25, color: Colors.black87),
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Container(
-                          height: 180,
+                          height: 300,
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              rickAndMortyCard(
-                                  "https://static.wikia.nocookie.net/rickandmorty/images/4/41/Morty_Smith.jpg/revision/latest?cb=20200519152019"),
                               rickAndMortyCard(
                                   "https://media.bantmag.com/wp-content/uploads/2021/03/rick-and-morty-header-800x533.jpg"),
                             ],
@@ -96,28 +95,35 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
+                    onTap: () {
+                      Get.to(() => ListCharacterPage());
+                    },
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   InkWell(
-                    child: Container(
-                      width: double.infinity,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              "Giriş",
+                              style: TextStyle(
+                                  fontSize: 35, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Giriş",
-                            style: TextStyle(
-                                fontSize: 35, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                      onTap: () {
+                        Get.to(
+                          () => ListCharacterPage(),
+                        );
+                      }),
                   SizedBox(
                     height: 20,
                   ),
@@ -128,18 +134,16 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(18.0),
                     ),
                     child: ElevatedButton(
-                      child: Text(
-                        "Demo Giriş",
-                        style: TextStyle(
-                            fontSize: 35, fontWeight: FontWeight.bold),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (builder) => CharaterName()));
-                      },
-                    ),
+                        child: Text(
+                          "Demo Giriş",
+                          style: TextStyle(
+                              fontSize: 35, fontWeight: FontWeight.bold),
+                        ),
+                        onPressed: () {
+                          Get.to(
+                            () => ListCharacterPage(),
+                          );
+                        }),
                   ),
                 ],
               )

@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   CharacterViewModel cvm = Get.put(CharacterViewModel());
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage("Login Screen"),
     );
   }
